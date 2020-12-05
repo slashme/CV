@@ -43,12 +43,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \RequirePackage[utf8]{inputenc}
+\RequirePackage[svgnames]{xcolor}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}       % somehow required for tikz to work at all
 \RequirePackage{graphicx}
-\RequirePackage{xcolor}
 \RequirePackage{fontawesome}
 \RequirePackage{academicons}
 
@@ -96,7 +96,7 @@
 % COLORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage{xcolor}
+\RequirePackage[svgnames]{xcolor}
 
 % Gray-scale colors
 \definecolor{white}{HTML}{FFFFFF}
