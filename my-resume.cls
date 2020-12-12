@@ -374,13 +374,13 @@
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
 \newlength{\jobdateplacelength}
 \newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.4\linewidth}
-\setlength{\jobpositionlength}{0.47\linewidth}
+\setlength{\jobdateplacelength}{0.5\linewidth}
+\setlength{\jobpositionlength}{0.37\linewidth}
 \newcommand{\job}[4]{%
-    \begin{minipage}[t]{\jobpositionlength}% minipage for position
+    \begin{minipage}[t]{\jobpositionlength}\vspace{0pt}% minipage for position
         {\large \color{emphasis} #3}
     \end{minipage}%
-    \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
+    \begin{minipage}[t]{\jobdateplacelength}\vspace{0pt}% minipage for left column with date/place
         \footnotesize
         \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
         \begin{flushright}
@@ -395,7 +395,7 @@
         \end{flushright}
         \end{minipage}%
     \end{minipage}%
-    \ifstrequal{#4}{}{}{\par \vspace{0.1em} \footnotesize #4}
+    \ifstrequal{#4}{}{}{\par \vspace{0.2em} \footnotesize #4}
     \par\normalsize
     \vspace{0.5em}
 }
@@ -464,10 +464,6 @@
 \newcommand{\publication}[5]{%
     {\normalsize \color{emphasis}#1\par}
     \vspace{0.1em}%
-    \begin{minipage}[t]{3mm}%
-        \makebox[3mm][c]{\footnotesize \faGroup}
-    \end{minipage}%
-    \hspace{0.5em}%
     \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.5em}%
         {\footnotesize #2\par}
     \end{minipage}%
@@ -475,20 +471,16 @@
     \vspace{0.25em}%
     \ifstrequal{#4}{}{%
         \begin{minipage}[t]{\dimexpr \pubdatelength+\pubjournallength-1.0em}%
-            \footnotesize \makebox[3mm][c]{\faCalendar} \hspace{0.25em} #3
+            \footnotesize #3
         \end{minipage}%
     }{%
         \begin{minipage}[t]{\dimexpr \pubdatelength-1.0em}%
-            \footnotesize \makebox[3mm][c]{\faCalendar} \hspace{0.25em} #3
+            \footnotesize #3
         \end{minipage}%
     }%
     \hspace{1.0em}
     \begin{minipage}[t]{\dimexpr \pubjournallength-1.0em}%
         \ifstrequal{#4}{}{}{%
-            \begin{minipage}[t]{3mm}%
-                \makebox[3mm][c]{\footnotesize \faBook}
-            \end{minipage}%
-            \hspace{0.5em}%
             \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.25em}%
                 {\footnotesize #4\par}
             \end{minipage}%
@@ -497,7 +489,7 @@
     \hspace{1.0em}
     \begin{minipage}[t]{\publinklength}%
         \ifstrequal{#5}{}{}{%
-            \footnotesize \makebox[3mm][c]{\faChain} \hspace{0.25em} #5\par
+            \footnotesize #5\par
         }%
     \end{minipage}%
     \par\normalsize
