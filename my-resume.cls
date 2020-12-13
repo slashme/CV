@@ -401,7 +401,6 @@
     {\large \color{emphasis} #3}\\
         \footnotesize
             #1\\
-        \vspace{0.1em}
             #2\\
     \ifstrequal{#4}{}{}{\par \vspace{0.2em} \footnotesize #4}
     \par\normalsize
