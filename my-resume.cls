@@ -368,7 +368,7 @@
   {\color{emphasis}\large\bfseries{#1}\par}\medskip
 }
 
-% format job/school list
+% format job list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
@@ -395,6 +395,21 @@
         \end{flushright}
         \end{minipage}%
     \end{minipage}%
+    \ifstrequal{#4}{}{}{\par \vspace{0.2em} \footnotesize #4}
+    \par\normalsize
+    \vspace{0.5em}
+}
+
+% format school list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
+\newcommand{\school}[4]{%
+    {\large \color{emphasis} #3}\\
+        \footnotesize
+            #1\\
+        \vspace{0.1em}
+            #2\\
     \ifstrequal{#4}{}{}{\par \vspace{0.2em} \footnotesize #4}
     \par\normalsize
     \vspace{0.5em}
