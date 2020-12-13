@@ -473,7 +473,8 @@
 \pubdefaultspacing
 
 \newcommand{\publication}[5]{%
-    \textbf{\normalsize \color{emphasis}#1\par}
+    \textbf{\normalsize \color{accent}#1\par}
+    \color{emphasis}
     \vspace{0.1em}%
         \ifstrequal{#2}{}{}{\footnotesize #2 \par}
         \ifstrequal{#4}{}{}{\footnotesize #4 \par}
