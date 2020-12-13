@@ -457,7 +457,9 @@
 \newlength{\pubjournallength}
 \newlength{\publinklength}
 
-% Spacings work erratically. Setting a highlight bar or not redefines \linewidth in a weird way which breaks the spacing and introduces line breaks. I have no idea what exactly causes this problem.
+% Spacings work erratically. Setting a highlight bar or not redefines \linewidth
+% in a weird way which breaks the spacing and introduces line breaks.
+% I have no idea what exactly causes this problem.
 
 % helper function to set spacings that work empirically
 \newcommand{\pubdefaultspacing}{%
@@ -466,7 +468,8 @@
     \setlength{\publinklength}{0.20\linewidth}
 }
 
-% helper function to force the publication to use the full width in normal page styles without highlight bar or header
+% helper function to force the publication to use the full width in normal
+% page styles without highlight bar or header
 \newcommand{\pubforcefullwidth}{%
     \setlength{\pubdatelength}{0.1\textwidth}
     \setlength{\pubjournallength}{0.8\textwidth}
@@ -477,36 +480,12 @@
 \pubdefaultspacing
 
 \newcommand{\publication}[5]{%
-    {\normalsize \color{emphasis}#1\par}
+    \textbf{\normalsize \color{emphasis}#1\par}
     \vspace{0.1em}%
-    \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.5em}%
-        {\footnotesize #2\par}
-    \end{minipage}%
-    \par%
-    \vspace{0.25em}%
-    \ifstrequal{#4}{}{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength+\pubjournallength-1.0em}%
-            \footnotesize #3
-        \end{minipage}%
-    }{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength-1.0em}%
-            \footnotesize #3
-        \end{minipage}%
-    }%
-    \hspace{1.0em}
-    \begin{minipage}[t]{\dimexpr \pubjournallength-1.0em}%
-        \ifstrequal{#4}{}{}{%
-            \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.25em}%
-                {\footnotesize #4\par}
-            \end{minipage}%
-        }%
-    \end{minipage}%
-    \hspace{1.0em}
-    \begin{minipage}[t]{\publinklength}%
-        \ifstrequal{#5}{}{}{%
-            \footnotesize #5\par
-        }%
-    \end{minipage}%
+        \ifstrequal{#2}{}{}{\footnotesize #2 \par}
+        \ifstrequal{#4}{}{}{\footnotesize #4 \par}
+        \ifstrequal{#3}{}{}{\footnotesize #3 \par}
+        \ifstrequal{#5}{}{}{\footnotesize #5 \par}
     \par\normalsize
     \vspace{1.0em}
 }
