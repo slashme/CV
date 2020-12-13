@@ -421,7 +421,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skillsection}[1]{%
-    \textit{\color{accent}#1}\par
+    \textbf{\color{accent}\large #1}\par
 }
 
 % tag (framed word or phrase)
