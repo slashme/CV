@@ -1,12 +1,6 @@
-# my-resume
-My resume/CV, based on [the template created by Dr. Nico Krieger](https://github.com/GiantMolecularCloud/my-resume).
-
-Requires XeLaTeX.
+This is my resume/CV, created with latex. I based the formatting on
+[the template created by Dr. Nico Krieger](https://github.com/GiantMolecularCloud/my-resume).
 
 # Resume
-<object data="https://github.com/slashme/CV/raw/main/resume.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/slashme/CV/raw/main/resume.pdf">
-        <p><a href="https://github.com/slashme/CV/raw/main/resume.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+[Download PDF](https://github.com/slashme/CV/raw/main/resume.pdf)
 
